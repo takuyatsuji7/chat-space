@@ -28,7 +28,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: flase|
+|name|string|null: false|
 
 ### Association
 
