@@ -55,8 +55,8 @@ has_many :messages
 
 |Column|Type|Options|
 |------|----|-------|
-|group|integer|foreign_key: true|
-|user|integer|foreign_key: true|
+|group|reference|foreign_key: true, null: false|
+|user|reference|foreign_key: true, null: false|
 
 ### Association
 
@@ -70,8 +70,8 @@ belongs_to :user
 |------|----|-------|
 |body|text|-------|
 |image|string|-------|
-|group|integer|foreign_key: true|
-|user|integer|foreign_key: true|
+|group|reference|foreign_key: true, null: false|
+|user|reference|foreign_key: true, null: false|
 
 ### Association
 
