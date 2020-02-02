@@ -42,7 +42,6 @@ has_many :messages
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
-|mail|string|null: false, unique: true|
 
 ### Association
 
