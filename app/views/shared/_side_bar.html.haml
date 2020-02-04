@@ -2,10 +2,10 @@
   .side-bar__user-name
     .top-items
       .top-items__name
-        辻拓哉
+        = current_user.name
       .top-items__icons
         = link_to icon("fas", "edit"), "#", class: "top-items__icons--new-group"
-        = link_to icon("fas", "cog"), "#", class: "top-items__icons--edit-user"
+        = link_to icon("fas", "cog"), edit_user_path(current_user.id), class: "top-items__icons--edit-user"
 
   .side-bar__group-list
     .group-show
