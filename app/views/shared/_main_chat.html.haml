@@ -1,0 +1,51 @@
+.main-chat
+  .main-chat__header
+    .left-header
+      .left-header__group-name
+        グループA
+      %ul.left-header__member-list
+        Member : 
+        %li.left-header__member-list__user-name
+          辻
+        %li.left-header__member-list__user-name
+          佐藤
+        %li.left-header__member-list__user-name
+          鈴木
+    .right-header
+      = link_to "Edit", "#", class: "right-header__edit-btn"
+
+  .main-chat__content
+    .main-chat__content--each
+      .posted-head
+        .posted-head__user-name
+          辻
+        .posted-head__post-date
+          2020/02/04(Tue)08:57:22
+      .posted-message
+        こんにちは
+    .main-chat__content--each
+      .posted-head
+        .posted-head__user-name
+          鈴木
+        .posted-head__post-date
+          2020/02/04(Tue)08:58:22
+      .posted-message
+        はいこんにちは
+    .main-chat__content--each
+      .posted-head
+        .posted-head__user-name
+          佐藤
+        .posted-head__post-date
+          2020/02/04(Tue)08:59:22
+      .posted-message
+        どうもこんにちは
+        
+  .main-chat__form
+    .center-bar
+      %form.center-bar__form
+        %input.center-bar__form__text_field{type: "text_field", name: "body", placeholder: "type a message"}
+        %label.center-bar__form__file
+          .center-bar__form__file--yes
+            = icon("fas", "images")
+          %input.center-bar__form__file--no{type: "file"}
+      %input.center-bar__submit{type: "submit", value: 'Send'}
