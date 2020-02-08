@@ -4,22 +4,11 @@
       .top-items__name
         = current_user.name
       .top-items__icons
-        = link_to icon("fas", "edit"), "#", class: "top-items__icons--new-group"
+        = link_to icon("fas", "edit"), new_group_path, class: "top-items__icons--new-group"
         = link_to icon("fas", "cog"), edit_user_path(current_user.id), class: "top-items__icons--edit-user"
 
   .side-bar__group-list
-    .group-show
-      .group-show__group-name
-        = link_to 'グループA', "#", class: "group-show__group-name--head"
-      .group-show__first-message
-        = link_to 'こんにちは', "#", class: "group-show__first-message--content"
-    .group-show
-      .group-show__group-name
-        = link_to 'グループB', "#", class: "group-show__group-name--head"
-      .group-show__first-message
-        = link_to 'さようなら', "#", class: "group-show__first-message--content"
-    .group-show
-      .group-show__group-name
-        = link_to 'グループC', "#", class: "group-show__group-name--head"
-      .group-show__first-message
-        = link_to 'また今度', "#", class: "group-show__first-message--content"
+    - @groups.each do |group|
+      .group-list
+        = link_to group.name, "#", class: "group-list__name"
+        = link_to 'メッセージはまだありません', "#", class: "group-list__message"

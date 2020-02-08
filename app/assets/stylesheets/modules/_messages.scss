@@ -42,18 +42,18 @@
   width: 300px;
   height: calc(100vh - 100px);
   background-color: #2f3e51;
-  & .group-show{
+  & .group-list{
     padding: 20px 20px 40px 20px;
     height: 91px;
     width: 300px;
     color: #ffffff;
-    &__group-name--head{
+    &__name{
       font-size: 15px;
       display: block;
       color: #ffffff;
       text-decoration: none;
     }
-    &__first-message--content{
+    &__message{
       font-size: 11px;
       display: block;
       color: #ffffff;
