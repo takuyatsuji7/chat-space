@@ -8,7 +8,8 @@
         = link_to icon("fas", "cog"), edit_user_path(current_user.id), class: "top-items__icons--edit-user"
 
   .side-bar__group-list
-    - @groups.each do |group|
+    - current_user.groups.each do |group|
       .group-list
-        = link_to group.name, "#", class: "group-list__name"
-        = link_to 'メッセージはまだありません', "#", class: "group-list__message"
+        = link_to group.name, group_messages_path(group.id), class: "group-list__name"
+        = link_to "#", class: "group-list__message" do
+          = group.show_last_message

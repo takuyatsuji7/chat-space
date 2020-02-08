@@ -1,0 +1,13 @@
+.main-chat__content--each
+  .posted-head
+    .posted-head__user-name
+      = message.user.name
+    .posted-heas__post-date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .posted-message
+    - if message.body.present?
+      %p.posted-message__body
+        = message.body
+    - if message.image.present?
+      %p.posted-message__image
+        = image_tag message.image.url, class: "posted-message__image"
