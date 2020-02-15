@@ -1,5 +1,4 @@
 $(function(){
-
   function buildHTML(message){
     if(message.image){
       let html = `<div class="main-chat__content--each">
@@ -38,12 +37,10 @@ $(function(){
       return html;
     }
   }
-
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     let formData = new FormData(this);
     let url = $(this).attr('action')
-
     $.ajax({
       url: url,
       type: "POST",
@@ -53,12 +50,10 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      console.log(message);
       let html = buildHTML(message)
       $(".main-chat__content").append(html);
       $(".main-chat__content").animate({ scrollTop: $(".main-chat__content")[0].scrollHeight})
       $('form')[0].reset()
-      // $("#message_body").val('');
       $(".center-bar__submit").prop('disabled', false);
     })
     .fail(function(){
