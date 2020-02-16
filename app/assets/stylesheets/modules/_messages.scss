@@ -107,6 +107,7 @@
   width: calc(100vw - 300px);
   height: calc(100vh - 190px);
   background-color: #fafafa;
+  overflow: scroll;
   &--each{
     padding: 35px 20px 46px 40px;
     & .posted-head{
