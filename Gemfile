@@ -59,6 +59,6 @@ gem "haml-rails"
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
-gem 'carrierwave'
+gem 'carrierwave-2.1.0'
 gem 'mini_magick'
 gem 'jquery-rails'
